@@ -8,8 +8,8 @@ module.exports = (formulario: any) => {
 	const token: string = jwt.sign(formulario.email, process.env.TOKEN_SECRET || 'prueba');
 	console.log(formulario.email)
 	var server = email.server.connect({
-		user: "prueba@emanuelpalestino.com",
-		password: "Emanuel123%",
+		user: "prueba@.com",
+		password: "*****",
 		host: "smtp.hostinger.com",
 		ssl: true,
 	});
@@ -18,7 +18,7 @@ module.exports = (formulario: any) => {
 
 	message =
 	{
-		from: "Desarrollo Emanuel <prueba@emanuelpalestino.com>",
+		from: "Desarrollo prueba <prueba@.com>",
 		to: formulario.email,
 		bcc: "",
 		subject: "Cambio de contraseña",
